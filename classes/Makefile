@@ -4,21 +4,22 @@
 
 # Compiler settings - Can be customized.
 CC = g++
-CXXFLAGS = -Wall -g
+CXXFLAGS = -Wall -g -std=c++11
 LDFLAGS = 
 
 # Makefile settings - Can be customized.
-APPNAME = triangles
+APPNAME = main
 EXT = .cpp
 SRCDIR = src
 OBJDIR = obj
 
 ############## Do not change anything from here downwards! #############
 SRC = $(wildcard $(SRCDIR)/*$(EXT))
-OBJ = $(SRC:$(SRCDIR)/%$(EXT)=$(OBJDIR)/%.o)
+MAIN_SRC = main$(EXT)
+OBJ = $(OBJDIR)/main.o $(SRC:$(SRCDIR)/%$(EXT)=$(OBJDIR)/%.o)
 DEP = $(OBJ:$(OBJDIR)/%.o=%.d)
 # UNIX-based OS variables & settings
-RM = rm
+RM = rm -f
 DELOBJ = $(OBJ)
 # Windows OS variables & settings
 DEL = del
@@ -45,6 +46,10 @@ $(APPNAME): $(OBJ)
 
 # Building rule for .o files and its .c/.cpp in combination with all .h
 $(OBJDIR)/%.o: $(SRCDIR)/%$(EXT)
+	$(CC) $(CXXFLAGS) -o $@ -c $<
+
+# Rule to build main.o from top-level main.cpp
+$(OBJDIR)/main.o: main$(EXT)
 	$(CC) $(CXXFLAGS) -o $@ -c $<
 
 ################### Cleaning rules for Unix-based OS ###################

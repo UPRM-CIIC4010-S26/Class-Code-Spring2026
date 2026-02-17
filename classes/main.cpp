@@ -1,6 +1,6 @@
 #include<iostream>
 #include<string>
-#include"triangle.cpp"
+#include "include/triangle.hpp"
 
 using namespace std;
 
