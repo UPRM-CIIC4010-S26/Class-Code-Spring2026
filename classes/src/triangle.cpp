@@ -4,21 +4,27 @@
 
 using namespace std;
 
-Triangle::Triangle() {
-    sideA = 10;
-    this->sideB = 10;
-    this->sideC = 10;
-}
-Triangle::Triangle(float sideA, float sideB, float sideC){
-    this->sideA = sideA;
-    this->sideB = sideB;
-    this->sideC = sideC;
+// Triangle::Triangle() {
+//     sideA = 10;
+//     this->sideB = 10;
+//     this->sideC = 10;
+// }
+// Triangle::Triangle(float sideA, float sideB, float sideC){
+//     this->sideA = sideA;
+//     this->sideB = sideB;
+//     this->sideC = sideC;
 
-}
+// }
 Triangle::Triangle(int sides[]) {
     this->sideA = sides[0];
     this->sideB = sides[1];
     this->sideC = sides[2];
+}
+
+Triangle::Triangle(float s) {
+    this->sideA = s;
+    this->sideB = s;
+    this->sideC = s;
 }
 float Triangle::getSemiPerimeter() {
     return (sideA + sideB + sideC)/2;
@@ -29,7 +35,11 @@ float Triangle::getArea() {
     return sqrt(semiP *(semiP - sideA) * (semiP - getSideB()) * (semiP - getSideC()));
 
 }
-
+std::ostream& operator<<(std::ostream& out, const Triangle& triangle) {
+    // Since triangle is a constant the methods it can access must be constant as well
+    return out << "(" << triangle.getSideA() << ", " << triangle.getSideB() << 
+  ", " << triangle.getSideC() << ")" <<std::endl;
+}
 int sum(int a, int b);
 
 // int main() {

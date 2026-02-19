@@ -12,11 +12,13 @@ class Triangle {
         float getSemiPerimeter();
         
         public:
-        Triangle();
-        Triangle(float a, float b, float c);
+        Triangle(float sideA, float sideB, float c): sideA(sideA), sideB(sideB), sideC(c) {
+            this->coords = Coordinates(1, 5);
+        }
+        Triangle(): Triangle(10, 10, 10){}
         Triangle(int sides[]);
         // New constructor
-        // Triangle(float sides);
+        Triangle(float sides);
         float getArea();
         float getSideA() { return this->sideA; }
         float getSideB() { return this->sideB; }
