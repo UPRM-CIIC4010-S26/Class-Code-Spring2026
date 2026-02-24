@@ -9,6 +9,7 @@ private:
     int age;
     bool isAdult;
     bool isSenior;
+    static int personCount;
 public:
     /*
         Parametized contructor
@@ -26,8 +27,11 @@ public:
         isSenior: true
     */
     Person();
-    ~Person(){}
+    ~Person(){
+        personCount--;
+    }
     std::string getSSN() const {
+
         return SSN;
     }
     std::string getName() const {

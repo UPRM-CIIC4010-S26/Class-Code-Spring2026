@@ -2,14 +2,16 @@
 #include<string>
 
 using namespace std;
-
+int Person::personCount = 0;
 Person::Person(string SSN, string name, int age){
     this->SSN = SSN;
     this->name = name;
     this->age = age;
     this->isAdult = age >= 18;
     this->isSenior = age >= 60;
+    this->personCount++;
 }
+
 /*
         Default should have
         SSN: 000-00-0000
