@@ -26,3 +26,4 @@ tempCodeRunnerFile.cpp
 *.o
 *.d
 *.exe
+*.dSYM

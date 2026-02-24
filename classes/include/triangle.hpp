@@ -20,9 +20,9 @@ class Triangle {
         // New constructor
         Triangle(float sides);
         float getArea();
-        float getSideA() { return this->sideA; }
-        float getSideB() { return this->sideB; }
-        float getSideC() { return this->sideC; }
+        float getSideA() const { return this->sideA; }
+        float getSideB() const { return this->sideB; }
+        float getSideC() const { return this->sideC; }
         Coordinates getCoords() { return this->coords;}
         void setSideA(float a) {this->sideA = a; }
         void setSideB(float b) {this->sideB = b; }

@@ -35,11 +35,7 @@ float Triangle::getArea() {
     return sqrt(semiP *(semiP - sideA) * (semiP - getSideB()) * (semiP - getSideC()));
 
 }
-std::ostream& operator<<(std::ostream& out, const Triangle& triangle) {
-    // Since triangle is a constant the methods it can access must be constant as well
-    return out << "(" << triangle.getSideA() << ", " << triangle.getSideB() << 
-  ", " << triangle.getSideC() << ")" <<std::endl;
-}
+
 int sum(int a, int b);
 
 // int main() {
