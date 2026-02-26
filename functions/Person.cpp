@@ -31,3 +31,8 @@ Person::Person(string SSN, string name, int age){
     bool Person::isOlder(Person p2){
         return this->age > p2.getAge();
     }
+
+    Person Person::getOldestPerson(Person p1, Person p2) {
+        if(p1.getAge() >= p2.getAge()) return p1;
+        return p2;
+    }

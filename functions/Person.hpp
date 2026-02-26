@@ -60,6 +60,8 @@ public:
     }
     std::string toString() const;
     bool isOlder(Person p2);
+    static int getPersonCount() {return personCount;}
+    static Person getOldestPerson(Person p1, Person p2);
 };
 
 

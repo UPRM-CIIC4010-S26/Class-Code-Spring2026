@@ -14,7 +14,9 @@ void Hero::takeDamage(int damage) {
  * The hero's health should not exceed 100 after healing.
  */
 void Hero::heal(int amount) {
-    
+    health += amount;
+    if(this->health >100)
+        this->health = 100;
 }
 /*
  * Calculates the attack power based on distance as follows:
@@ -27,7 +29,7 @@ void Hero::heal(int amount) {
  * return 0 if the hero does not have the appropriate weapon for the distance.
  */
 float Hero::rangeAttack(float distance) const {
-    
+    return 0.0f;
 }
 /*
  * Uses an item from the hero's inventory. 
@@ -41,5 +43,5 @@ float Hero::rangeAttack(float distance) const {
  *   last for one attack.
  */
 void Hero::useItem(Items item) {
-    
+    return;
 }

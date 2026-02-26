@@ -46,12 +46,19 @@ void printCounter()
 int main() {
 
     // cout << getCode(0) << endl;
-    // Person john;
+    Person john;
 
-    // Person ben = Person("123-45-6789", "Ben Parker", 68);
+    Person ben = Person("123-45-6789", "Ben Parker", 68);
 
-    // cout << john.toString() << endl;
-    // cout << ben.toString() << endl;
+    cout << john.toString() << endl;
+    cout << ben.toString() << endl;
+    cout << "Person count: " << Person::getPersonCount() << endl;
+    if(true) {
+        Person amy = Person("111-11-1111", "Amy", 12);
+        cout << "Person count: " << Person::getPersonCount() << endl;
+        cout << "Who is oldest? " << Person::getOldestPerson(ben, amy) << endl;
+    }
+    cout << "Person count: " << Person::getPersonCount() << endl;
 
     // updateValueBy10(john);
     // cout << john.toString() << endl;
@@ -78,12 +85,12 @@ int main() {
 
     // cout << "Adding people: " << sum(john, ben);
 
-    for (int i = 0; i < 5; ++i)
-    {
-        printCounter();
+    // for (int i = 0; i < 5; ++i)
+    // {
+    //     printCounter();
 
-    }
-    return 0;
+    // }
+    // return 0;
 }
 
 string getValue(int a) {
