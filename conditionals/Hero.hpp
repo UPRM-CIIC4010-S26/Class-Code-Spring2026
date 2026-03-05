@@ -17,6 +17,7 @@ public:
         hasShield(shield), hasSword(sword), hasBow(bow), health(health){}
 
     Hero():Hero("Link", 40, true, true, true, 100){}
+    Hero(std::string name);
     ~Hero(){}
 
     // Getters

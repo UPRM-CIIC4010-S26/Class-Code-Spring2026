@@ -3,20 +3,17 @@
 #include "Hero.hpp"
 
 using namespace std;
-void heal(int amount, Hero hero) {
-    hero.setHealth(hero.getHealth() + amount);
-    if(hero.getHealth() > 100) hero.setHealth(100);
-}
+
 int main() {
-    string divider;
-    divider.assign(50, '=');
-    Hero link; 
-    cout << divider << endl;
-    cout << link.toString() << endl;
-    link.takeDamage(40);
-    cout << "After taking damage: " << link.toString() << endl;
-    link.heal(70);
-    cout << "After healing: " << link.toString() << endl;
+//     string divider;
+//     divider.assign(50, '=');
+//     Hero link; 
+//     cout << divider << endl;
+//     cout << link.toString() << endl;
+//     link.takeDamage(40);
+//     cout << "After taking damage: " << link.toString() << endl;
+//     link.heal(70);
+//     cout << "After healing: " << link.toString() << endl;
 //     // --------------------------------
 //     // cout << divider << endl;
 //     // cout << "Range attack at distance 3: " << link.rangeAttack(3) << endl;
@@ -34,4 +31,12 @@ int main() {
 //     // cout << "After using poison: " << link.toString() << endl;
 //     // link.useItem(ELIXER);
 //     // cout << "After using elixer: " << link.toString() << endl;
+
+    char H = 'H';
+    char a = 'a';
+
+    cout << boolalpha;
+    cout << "Result: " << (a < H) << endl;
+    cout << (int) H << endl;
+    cout << (int ) a << endl;
 }

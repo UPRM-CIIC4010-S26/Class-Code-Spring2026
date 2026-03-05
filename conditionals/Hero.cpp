@@ -38,10 +38,21 @@ float Hero::rangeAttack(float distance) const {
  *   but the hero's health should not exceed 100.
  * - POISON: Reduces the hero's health by 15 points, 
  *   but the hero's health should not drop below 0.
- * - ELIXER: Increases the hero's attack power by 10 
- *   for the next attack, but this effect should only 
- *   last for one attack.
+ * - ELIXER: Increases the hero's attack power by 10.
  */
 void Hero::useItem(Items item) {
-    return;
+    switch (item)
+    {
+    case POTION:
+        this->heal(20);
+        break;
+    case POISON:
+        this->health -= 15;
+        if(health < 0) this->health = 0;
+        break;
+
+    case ELIXER:
+        this->setAttack(this->getAttack() + 10);
+        break;
+    }
 }
