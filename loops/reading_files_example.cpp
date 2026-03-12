@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    ifstream file("../example2.txt");  // Open the file
+    ifstream file("example.txt");  // Open the file
     string line;
     int count = 0;
     if (file.is_open()) {

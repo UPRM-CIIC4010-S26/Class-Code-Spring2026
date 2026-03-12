@@ -25,13 +25,22 @@ int monsterFight(MonsterCard card1, MonsterCard card2) {
 
 int countWerewolves(MonsterCard deck[], int size) {
     int count = 0;
-    int index = 0;
-    while(index < size) {
-        MonsterCard monster = deck[index];
-        if(monster.getType() == WEREWOLF)
+    // int index = 0;
+    // while(index < size) {
+    //     MonsterCard monster = deck[index];
+    //     if(monster.getType() == WEREWOLF)
+    //         count++;
+    //     index++;
+    // }
+    for(int index = 0; index < size; index++) {
+
+        if(deck[index].getType() == WEREWOLF)
             count++;
-        index++;
     }
+    // for(MonsterCard card: deck) {
+    //     if(card.getType() == WEREWOLF)
+    //         count++;
+    // }
     return count;
 }
 int countEvenAttack(MonsterCard deck[], int size){
@@ -55,7 +64,7 @@ int main() {
         MonsterCard(5, "Seamonster Leviathan", 20, 10, 6, SEAMONSTER, TROLL, true)
     };
 
-    cout << "Werewolf card count: " << countEvenAttack(deck, 5) << endl;
+    cout << "Werewolf card count: " << countWerewolves(deck, 5) << endl;
     // Test findStrongestMonster
     // MonsterCard strongest = findStrongestMonster(deck);
     // cout << "The strongest monster is: " << strongest.getName() << endl;
