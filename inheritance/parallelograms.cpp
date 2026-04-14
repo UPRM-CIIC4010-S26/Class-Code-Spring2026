@@ -92,6 +92,7 @@ class Square : public Rectangle {
     // Parametized constructor
     Square(int side): Rectangle(side, side){
         saySomething();
+        getArea();
     }
     // Get shape name override
     string getShapeName() override {return "Square";}
