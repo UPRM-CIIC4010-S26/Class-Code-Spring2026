@@ -1,5 +1,6 @@
 #ifndef STACK_H
 #define STACK_H
+#include <string>
 /*
 * This is the stack class.
 *
@@ -27,7 +28,7 @@ important thing is that
 * whichever position we pick, be it the last or fisrt position, we
 consistently use that position.
 */
-class stackInterface
+class StackInterface
 {
 public:
     virtual char pop() = 0; // Removes and returns the top element of
@@ -36,5 +37,6 @@ public:
     virtual int size() = 0; // Returns the number of elements in the stack
     virtual bool isEmpty() = 0; // Returns true if the stack is empty, false otherwise
     virtual void clear() = 0; // Clears the stack
+    virtual std::string toString() = 0;
 };
 #endif
